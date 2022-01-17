@@ -1,4 +1,4 @@
-require("dotenv").config();
+require("dotenv").config({ path: "config.env" });
 const mongoose = require("mongoose");
 function connectDB() {
   //Database Connection
@@ -11,6 +11,7 @@ function connectDB() {
     })
     .then(() => {
       console.log("Database Connected");
+      // console.log(process.env.MONGO_CONNECTION_URL);
     })
     .catch((e) => {
       console.log(e);
