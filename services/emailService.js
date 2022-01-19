@@ -19,7 +19,7 @@ async function sendMail({ from, to, subject, text, html }) {
   // nodemailer method
   try {
     let mailInfo = {
-      from: `codeintelli <${from}>`,
+      from: `CodeShare <${from}>`,
       to,
       subject,
       text,
